@@ -51,7 +51,7 @@ With the previous parameters, this outputs the following code:
 </div>
 ```
 
-*Note about the `$data` array: if you do not specify 'status' the default class will be 'error'. If you do not specify an icon, the 'alert--has-icon' class and the icon element will not show.*
+*Note about the `$data` array: if you do not specify `status` the default class will be `error`. If you do not specify an icon, the `alert--has-icon` class and the icon element will not be included in the output.*
 
 ## Filters
 
