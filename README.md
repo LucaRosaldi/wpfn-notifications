@@ -2,9 +2,9 @@
 
 This is an extension for the `WP_Error` class which allows various notifications (not only errors) to be returned and displayed in the frontend.
 
-Basically, you can add notifications in the same way you add errors to the WP_Error class, and it generates and displays HTML for all your notifications via an action. You can specify a status class for the notification (i.e. 'warning', 'error', 'success', 'info', and so on ) and even a icon (i.e. 'thumbs-up') which will be inserted in the HTML.
+Basically, you can add notifications in the same way you add errors to the WP_Error class, and it generates and displays HTML for all your notifications via an action. You can specify a status class for the notification (i.e. `warning`, `error`, `success`, `info`, and so on ) and even a icon (i.e. `thumbs-up`) which will be inserted in the HTML.
 
-The generated HTML uses the BEM syntax, apart from the icon, which uses the single-dash sintax which is more common for icon font tool such as [Icomoon](https://icomoon.io/app/). More on that below.
+The generated HTML uses the [BEM syntax](https://bem.info/), apart from the icon, which uses the single-dash sintax which is more common for icon font tool such as [Icomoon](https://icomoon.io/app/). More on that below.
 
 ## Usage
 
@@ -81,12 +81,12 @@ Now the HTML output will be:
 
 ## Shortcode
 
-Want to put the notifications in the page content. No sweat: add `[wpfn_notifications]` in the editor and you’re done.
+Want to put the notifications in the page content? No sweat: add `[wpfn_notifications]` in the editor and you’re done.
 
 ## The end
 
-I made this because I believe in using WordPress core functions whenever possible, and I did not find any valid solution to the problem of displaying multi-purpose notices in the frontend.
+I made this because I believe in using WordPress core functions whenever possible, and I did not find any valid solution for displaying multi-purpose notices in the frontend.
 
 For more methods and documentation, see the [codex page for WP_Error](http://codex.wordpress.org/Class_Reference/WP_Error).
 
-Critics, comments, suggestions and bug findings are welcome.
+Critics, comments, suggestions and bug reports are welcome.
