@@ -57,17 +57,17 @@ With the previous parameters, this outputs the following code:
 
 So now, if you’re screaming: *but I don’t use the 'alert' class in my CSS!*, well, good news for you: there’s a filter for that.
 
-You can specify the class for the container by putting this in your `functions.php` file:
+You can specify the class for the container by putting this in your `functions.php` file (changing the returned class name):
 
 
 ```php
 /**
  * Change the default container class for the notifications.
  */
-function sltr_notifications_class() {
+function mytheme_notifications_class() {
   return 'myclass';
 }
-add_filter( 'wpfn_container_class', 'sltr_notifications_class' );
+add_filter( 'wpfn_container_class', 'mytheme_notifications_class' );
 ```
 
 Now the HTML output will be:
