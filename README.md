@@ -2,7 +2,7 @@
 
 This is an extension for the `WP_Error` class which allows various notifications (not only errors) to be returned and displayed in the frontend.
 
-Basically, you can add notifications in the same way you add errors to the WP_Error class, and it generates and displays HTML for all your notifications via an action. You can specify a status class for the notification (i.e. `warning`, `error`, `success`, `info`, and so on ) and even a icon (i.e. `thumbs-up`) which will be inserted in the HTML.
+Basically, you can add notifications in the same way you add errors to the `WP_Error` class. The class generates and displays HTML for all your notifications via an action. You can specify a `status` CSS class for the notification (i.e. `warning`, `error`, `success`, `info`, and so on ), and even an icon (i.e. `thumbs-up`), which will be inserted in the HTML.
 
 The generated HTML uses the [BEM syntax](https://bem.info/), apart from the icon, which uses the single-dash sintax which is more common for icon font tool such as [Icomoon](https://icomoon.io/app/). More on that below.
 
