@@ -10,7 +10,7 @@
  * @subpackage WordPress Frontend Notifications
  *
  * @uses WP_Error
- * @version 1.0
+ * @version 1.0.1
  */
 if ( !class_exists( 'WPFN_Notification' ) ) :
 class WPFN_Notification extends WP_Error {
@@ -20,7 +20,7 @@ class WPFN_Notification extends WP_Error {
    *
    * @since 1.0
    * @access private
-   * 
+   *
    * @var string
    */
   private $html = '';
@@ -31,7 +31,7 @@ class WPFN_Notification extends WP_Error {
    *
    * @since 1.0
    * @access private
-   * 
+   *
    * @var string
    */
   private $status = 'error';
@@ -41,7 +41,7 @@ class WPFN_Notification extends WP_Error {
    *
    * @since 1.0
    * @access private
-   * 
+   *
    * @var string
    */
   private $icon = '';
@@ -51,7 +51,7 @@ class WPFN_Notification extends WP_Error {
    *
    * @since 1.0
    * @access public
-   * 
+   *
    * @var string
    */
   public $container_class = 'alert';
@@ -74,7 +74,7 @@ class WPFN_Notification extends WP_Error {
    *
    * @since 1.0
    * @access public
-   * 
+   *
    * @param string|int $code Error code
    * @param string $message Error message
    * @param mixed $data Optional. Error data.
@@ -98,14 +98,14 @@ class WPFN_Notification extends WP_Error {
    * @param mixed $data Optional. Notification data.
    */
   public function add($code, $message, $data = '') {
-    $this->__set( 'errors', array( $code => array( $message ) ) );
-    if ( ! empty($data) ) {
-      $this->__set( 'error_data', array( $code => array( $data ) ) );
-      if ( isset( $data['status'] ) )
-        $this->status = $data['status'];
-      if ( isset( $data['icon'] ) )
-        $this->icon = $data['icon'];
-    }
+    $this->errors[$code][] = $message;
+    if ( ! empty($data) )
+      $this->error_data[$code] = $data;
+
+    if ( ! empty($data['status']) )
+      $this->status = $data['status'];
+    if ( ! empty($data['icon']) )
+      $this->icon = $data['icon'];
   }
 
   /**
@@ -148,7 +148,7 @@ class WPFN_Notification extends WP_Error {
    *
    * @since 1.0
    * @access public
-   * 
+   *
    * @param string $container_class The class for the notification container.
    * @return void        If at least one notification is present, echoes the notifications HTML.
    */
